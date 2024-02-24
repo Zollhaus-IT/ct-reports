@@ -4,6 +4,8 @@ services:
 
   db:
     image: postgres
+    container_name: postgres
+    hostname: postgres
     restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: postgres-pw
@@ -13,6 +15,8 @@ services:
 
   adminer:
     image: adminer
+    container_name: adminer
+    hostname: adminer
     restart: unless-stopped
     ports:
       - 8080:8080

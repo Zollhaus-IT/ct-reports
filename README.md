@@ -6,12 +6,25 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 ## Running the application in dev mode
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
+First of all, you need to create a Churchtools API Keys online (https://<your-domain>.church.tools/api/persons/<your-person-id>/logintoken). 
+Remember that you need to be logged in, to retrieve your token. Once your tokes is created add it to the application.properties file.
+```yaml
+ct.logintoken=<your-token>
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+Afterwards, you can run your application in dev mode that enables live coding using:
+```shell script
+# start the dev postgres database
+docker-compose -f ./.local/docker-compose.yml up -d
+
+# create the database schema via docker exec and postgres psql
+docker exec -it postgres psql -U postgres-user -c "CREATE DATABASE ctreportdb"
+
+# start the quarkus application in dev mode
+./mvnw clean compile quarkus:dev
+```
+
+> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8088/q/dev/.
 
 ## Packaging and running the application
 
