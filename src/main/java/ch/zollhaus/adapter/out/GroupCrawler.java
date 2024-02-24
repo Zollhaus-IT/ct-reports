@@ -40,12 +40,13 @@ public class GroupCrawler {
     @ConfigProperty(name = "ct.logintoken")
     String loginToken;
 
-    @Scheduled(every = "1d", delay = 30, delayUnit = TimeUnit.SECONDS, concurrentExecution = SKIP)
+    @Scheduled(every = "1h", delay = 30, delayUnit = TimeUnit.SECONDS, concurrentExecution = SKIP)
     public void crawlGroups() {
         GroupMeetingResponse groupMeetingResponse = ctApiGroupClient.getGroupMeetings(loginToken, groupId);
         List<Integer> meetingIds = groupMeetingResponse.getData().stream()
                 .map(ch.zollhaus.adapter.mapping.gmr.DataItem::getId)
                 .toList();
+
         
     }
 
