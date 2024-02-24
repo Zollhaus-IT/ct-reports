@@ -1,6 +1,8 @@
-# code-with-quarkus
+# CT Report
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+This project is a Quarkus application that retrieves data from the Churchtools API and stores it in a database.
+
+The project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
