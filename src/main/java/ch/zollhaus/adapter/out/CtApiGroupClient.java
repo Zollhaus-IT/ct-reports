@@ -13,11 +13,22 @@ public interface CtApiGroupClient {
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/{groupId}/meetings")
-    GroupMeetingResponse getGroupMeetings(@QueryParam("login_token") String token, @PathParam("groupId") String groupId);
+    GroupMeetingResponse getGroupMeetings(
+            @QueryParam("login_token") String token,
+            @PathParam("groupId") String groupId,
+            @QueryParam("start_date") String startDate,
+            @QueryParam("end_date") String endDate,
+            @QueryParam("is_canceled") Boolean isCanceled,
+            @QueryParam("is_completed") Boolean isCompleted
+    );
 
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/{groupId}/meetings/{meetingId}/members")
-    GroupMeetingPersonResponse getCheckinData(@QueryParam("login_token") String token, @PathParam ("groupId") String groupId, @PathParam("meetingId") String meetingId);
+    GroupMeetingPersonResponse getCheckinData(
+            @QueryParam("login_token") String token,
+            @PathParam ("groupId") String groupId,
+            @PathParam("meetingId") String meetingId
+    );
 
 }
