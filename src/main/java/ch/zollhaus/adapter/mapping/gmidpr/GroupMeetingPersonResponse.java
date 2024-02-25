@@ -1,4 +1,4 @@
-package ch.zollhaus.adapter.mapping.gmpr;
+package ch.zollhaus.adapter.mapping.gmidpr;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;

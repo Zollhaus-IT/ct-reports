@@ -1,6 +1,7 @@
 package ch.zollhaus.adapter.out;
 
-import ch.zollhaus.adapter.mapping.gmpr.GroupMeetingPersonResponse;
+import ch.zollhaus.adapter.mapping.gmidpr.GroupMeetingPersonResponse;
+import ch.zollhaus.adapter.mapping.gmidr.GroupMeetingIdResponse;
 import ch.zollhaus.adapter.mapping.gmr.GroupMeetingResponse;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -20,6 +21,15 @@ public interface CtApiGroupClient {
             @QueryParam("end_date") String endDate,
             @QueryParam("is_canceled") Boolean isCanceled,
             @QueryParam("is_completed") Boolean isCompleted
+    );
+
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/{groupId}/meetings/{meetingId}")
+    GroupMeetingIdResponse getSpecificGroupMeeting(
+            @QueryParam("login_token") String token,
+            @PathParam("groupId") String groupId,
+            @PathParam("meetingId") String meetingId
     );
 
     @GET

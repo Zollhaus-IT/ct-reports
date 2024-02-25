@@ -1,7 +1,8 @@
 package ch.zollhaus.adapter.out;
 
-import ch.zollhaus.adapter.mapping.gmpr.DataItem;
-import ch.zollhaus.adapter.mapping.gmpr.GroupMeetingPersonResponse;
+import ch.zollhaus.adapter.mapping.gmidpr.DataItem;
+import ch.zollhaus.adapter.mapping.gmidpr.GroupMeetingPersonResponse;
+import ch.zollhaus.adapter.mapping.gmidr.GroupMeetingIdResponse;
 import ch.zollhaus.adapter.mapping.gmr.GroupMeetingResponse;
 import ch.zollhaus.app.repos.CheckinPersonGroupMeetingsRepository;
 import ch.zollhaus.domain.groups.meetings.CheckinPersonGroupMeetings;
@@ -25,8 +26,6 @@ import static io.quarkus.scheduler.Scheduled.ConcurrentExecution.SKIP;
 public class GroupCrawler {
 
     private static final Logger LOG = LoggerFactory.getLogger(GroupCrawler.class);
-    private static final List<Integer> processedMeetingIds = new ArrayList<Integer>();
-    private static final List<Integer> deadletterQueueMeetingIds = new ArrayList<Integer>();
 
     @RestClient
     CtApiGroupClient ctApiGroupClient;
@@ -50,7 +49,6 @@ public class GroupCrawler {
                 .map(ch.zollhaus.adapter.mapping.gmr.DataItem::getId)
                 .toList());
 
-
         for (Integer meetingId : meetingIds) {
             crawlGroupMeetingPersons(groupId, meetingId.toString());
         }
@@ -63,6 +61,10 @@ public class GroupCrawler {
                 groupMeetingPersonResponse.getData().size(),
                 meetingId
         );
+
+        GroupMeetingIdResponse groupMetaData = ctApiGroupClient.getSpecificGroupMeeting(loginToken, groupId, meetingId);
+        LOG.info("retrieved metadata for meeting {}",
+                meetingId);
 
         List<DataItem> checkedInPersons = groupMeetingPersonResponse.getData().stream()
                 .filter(DataItem::isIsCheckedIn)
@@ -86,7 +88,7 @@ public class GroupCrawler {
         CheckinPersonGroupMeetings checkinPersonGroupMeeting = new CheckinPersonGroupMeetings(
                 meetingId,
                 groupId,
-                groupMeetingPersonResponse.getData().get(0).getDateFrom(),
+                groupMetaData.getData().getDateFrom(),
                 checkedInPersonsParticipantsCount,
                 checkedInPersonsLeadersCount,
                 notCheckedInPersonsCount
