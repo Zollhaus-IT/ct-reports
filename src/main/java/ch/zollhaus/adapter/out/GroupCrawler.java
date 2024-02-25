@@ -43,33 +43,23 @@ public class GroupCrawler {
     @ConfigProperty(name = "ct.logintoken")
     String loginToken;
 
-    @Scheduled(every = "5s", delay = 30, delayUnit = TimeUnit.SECONDS, concurrentExecution = SKIP)
+    @Scheduled(every = "10s", delay = 10, delayUnit = TimeUnit.SECONDS, concurrentExecution = SKIP)
     public void crawlGroups() {
-        GroupMeetingResponse groupMeetingResponse = ctApiGroupClient.getGroupMeetings(loginToken, groupId, "2023-01-01", "2023-12-31", null,  null);
+        GroupMeetingResponse groupMeetingResponse = ctApiGroupClient.getGroupMeetings(loginToken, groupId, "2023-01-01", "2024-02-25", null,  null);
         List<Integer> meetingIds = new ArrayList<>(groupMeetingResponse.getData().stream()
                 .map(ch.zollhaus.adapter.mapping.gmr.DataItem::getId)
                 .toList());
 
-        LOG.info("Crawled {} meetings for group {}", meetingIds.size(), groupId);
 
-        // get the difference between the two lists meetingIds and processedMeetingIds
-        meetingIds.removeAll(processedMeetingIds);
-        List<Integer> unprocessedMeetingIds = meetingIds;
-
-        for (Integer unprocessedMeetingId : unprocessedMeetingIds) {
-            try {
-                crawlGroupMeetingPersons(groupId, unprocessedMeetingId.toString());
-                processedMeetingIds.add(unprocessedMeetingId);
-            } catch (Exception e) {
-                LOG.error("Error while crawling meeting {} for group {}", unprocessedMeetingId, groupId, e);
-                deadletterQueueMeetingIds.add(unprocessedMeetingId);
-            }
+        for (Integer meetingId : meetingIds) {
+            crawlGroupMeetingPersons(groupId, meetingId.toString());
         }
+        LOG.info("Processed {} meetings for group {}", meetingIds.size(), groupId);
     }
 
     private void crawlGroupMeetingPersons(String groupId, String meetingId) {
         GroupMeetingPersonResponse groupMeetingPersonResponse = ctApiGroupClient.getCheckinData(loginToken, groupId, meetingId);
-        LOG.info("Crawled {} checkins for meeting {}",
+        LOG.info("retrieved {} persons for meeting {}",
                 groupMeetingPersonResponse.getData().size(),
                 meetingId
         );
@@ -96,13 +86,13 @@ public class GroupCrawler {
         CheckinPersonGroupMeetings checkinPersonGroupMeeting = new CheckinPersonGroupMeetings(
                 meetingId,
                 groupId,
-                "2021-10-10T10:00:00",
+                groupMeetingPersonResponse.getData().get(0).getDateFrom(),
                 checkedInPersonsParticipantsCount,
                 checkedInPersonsLeadersCount,
                 notCheckedInPersonsCount
         );
 
-        checkinPersonGroupMeetingsRepository.persist(checkinPersonGroupMeeting);
+        checkinPersonGroupMeetingsRepository.createOrOverwrite(checkinPersonGroupMeeting);
     }
 
 }
