@@ -17,8 +17,9 @@ on:
 jobs:
   build:
 
-    runs-on: 
-      labels: java
+    runs-on:
+      group: default
+      labels: java,self-hosted
 
     steps:
     - uses: actions/checkout@v3
