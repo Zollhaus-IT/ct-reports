@@ -19,7 +19,7 @@ jobs:
 
     runs-on:
       group: Default
-      labels: java,self-hosted
+      labels: self-hosted
 
     steps:
     - uses: actions/checkout@v3
