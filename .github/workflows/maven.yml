@@ -30,7 +30,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: ./mvnw package clean package --file pom.xml
+    - name: create docker image
+      run: docker build -f src/main/docker/Dockerfile.jvm -t quarkus/code-with-quarkus-jvm .
+    - name: push docker image to github image registry
+      run: docker login ghcr.io -u ${{ secrets.GITHUB_USERNAME }} -p ${{ secrets.GITHUB_TOKEN }} && docker tag quarkus/code-with-quarkus-jvm ghcr.io/quarkus/code-with-quarkus-jvm && docker push ghcr.io/quarkus/code-with-quarkus-jvm
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
