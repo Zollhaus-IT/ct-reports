@@ -34,4 +34,8 @@ public class CheckinPersonGroupMeetingsRepository implements PanacheRepository<C
             Log.info("Updated CheckinPersonGroupMeetings with meetingId: " + checkinPersonGroupMeetings.getMeetingId());
         }
     }
+
+    public List<CheckinPersonGroupMeetings> getAll() {
+        return listAll();
+    }
 }

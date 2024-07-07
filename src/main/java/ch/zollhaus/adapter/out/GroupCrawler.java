@@ -33,16 +33,13 @@ public class GroupCrawler {
     @Inject
     CheckinPersonGroupMeetingsRepository checkinPersonGroupMeetingsRepository;
 
-    @ConfigProperty(name = "ct.api.group.meeting.id")
-    String meetingId;
-
     @ConfigProperty(name = "ct.api.group.id")
     String groupId;
 
     @ConfigProperty(name = "ct.logintoken")
     String loginToken;
 
-    @Scheduled(every = "10s", delay = 10, delayUnit = TimeUnit.SECONDS, concurrentExecution = SKIP)
+    @Scheduled(every = "50m", delay = 500, delayUnit = TimeUnit.SECONDS, concurrentExecution = SKIP)
     public void crawlGroups() {
         GroupMeetingResponse groupMeetingResponse = ctApiGroupClient.getGroupMeetings(loginToken, groupId, "2023-01-01", "2024-02-25", null,  null);
         List<Integer> meetingIds = new ArrayList<>(groupMeetingResponse.getData().stream()
@@ -52,18 +49,18 @@ public class GroupCrawler {
         for (Integer meetingId : meetingIds) {
             crawlGroupMeetingPersons(groupId, meetingId.toString());
         }
-        LOG.info("Processed {} meetings for group {}", meetingIds.size(), groupId);
+        LOG.debug("Processed {} meetings for group {}", meetingIds.size(), groupId);
     }
 
     private void crawlGroupMeetingPersons(String groupId, String meetingId) {
         GroupMeetingPersonResponse groupMeetingPersonResponse = ctApiGroupClient.getCheckinData(loginToken, groupId, meetingId);
-        LOG.info("retrieved {} persons for meeting {}",
+        LOG.debug("retrieved {} persons for meeting {}",
                 groupMeetingPersonResponse.getData().size(),
                 meetingId
         );
 
         GroupMeetingIdResponse groupMetaData = ctApiGroupClient.getSpecificGroupMeeting(loginToken, groupId, meetingId);
-        LOG.info("retrieved metadata for meeting {}",
+        LOG.debug("retrieved metadata for meeting {}",
                 meetingId);
 
         List<DataItem> checkedInPersons = groupMeetingPersonResponse.getData().stream()

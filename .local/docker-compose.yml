@@ -10,6 +10,7 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres-pw
       POSTGRES_USER: postgres-user
+      POSTGRES_DB: ctreportdb
     ports:
       - 5432:5432
 

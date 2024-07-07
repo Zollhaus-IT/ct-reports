@@ -1,0 +1,928 @@
+{
+  "data": {
+    "roles": [
+      {
+        "id": 8,
+        "groupTypeId": 1,
+        "name": "Teilnehmer",
+        "nameTranslated": "Teilnehmer",
+        "shorty": "",
+        "sortKey": 0,
+        "type": "participant",
+        "isDefault": true,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 9,
+        "groupTypeId": 2,
+        "name": "Teilnehmer",
+        "nameTranslated": "Teilnehmer",
+        "shorty": "",
+        "sortKey": 0,
+        "type": "participant",
+        "isDefault": true,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 11,
+        "groupTypeId": 4,
+        "name": "Teilnehmer",
+        "nameTranslated": "Teilnehmer",
+        "shorty": "",
+        "sortKey": 0,
+        "type": "participant",
+        "isDefault": true,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 37,
+        "groupTypeId": 5,
+        "name": "Teilnehmer",
+        "nameTranslated": "Teilnehmer",
+        "shorty": "",
+        "sortKey": 0,
+        "type": "participant",
+        "isDefault": true,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 36,
+        "groupTypeId": 5,
+        "name": "Leiter",
+        "nameTranslated": "Leiter",
+        "shorty": "L",
+        "sortKey": 1,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 15,
+        "groupTypeId": 4,
+        "name": "Leiter",
+        "nameTranslated": "Leiter",
+        "shorty": "L",
+        "sortKey": 1,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 12,
+        "groupTypeId": 1,
+        "name": "Leiter",
+        "nameTranslated": "Leiter",
+        "shorty": "L",
+        "sortKey": 1,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 13,
+        "groupTypeId": 2,
+        "name": "Leiter",
+        "nameTranslated": "Leiter",
+        "shorty": "L",
+        "sortKey": 1,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 16,
+        "groupTypeId": 1,
+        "name": "Co-Leiter",
+        "nameTranslated": "Co-Leiter",
+        "shorty": "CoL",
+        "sortKey": 2,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 39,
+        "groupTypeId": 5,
+        "name": "Co-Leiter",
+        "nameTranslated": "Co-Leiter",
+        "shorty": "CoL",
+        "sortKey": 2,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 19,
+        "groupTypeId": 4,
+        "name": "Co-Leiter",
+        "nameTranslated": "Co-Leiter",
+        "shorty": "CoL",
+        "sortKey": 2,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 17,
+        "groupTypeId": 2,
+        "name": "Co-Leiter",
+        "nameTranslated": "Co-Leiter",
+        "shorty": "CoL",
+        "sortKey": 2,
+        "type": "leader",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": true
+      },
+      {
+        "id": 21,
+        "groupTypeId": 2,
+        "name": "Supervisor",
+        "nameTranslated": "Supervisor",
+        "shorty": "S",
+        "sortKey": 3,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 40,
+        "groupTypeId": 5,
+        "name": "Supervisor",
+        "nameTranslated": "Supervisor",
+        "shorty": "S",
+        "sortKey": 3,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": true,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 20,
+        "groupTypeId": 1,
+        "name": "Supervisor",
+        "nameTranslated": "Supervisor",
+        "shorty": "S",
+        "sortKey": 3,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": true,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 23,
+        "groupTypeId": 4,
+        "name": "Supervisor",
+        "nameTranslated": "Supervisor",
+        "shorty": "S",
+        "sortKey": 3,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": true,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 38,
+        "groupTypeId": 5,
+        "name": "Mitarbeiter",
+        "nameTranslated": "Mitarbeiter",
+        "shorty": "M",
+        "sortKey": 4,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 27,
+        "groupTypeId": 4,
+        "name": "Mitarbeiter",
+        "nameTranslated": "Mitarbeiter",
+        "shorty": "M",
+        "sortKey": 4,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 25,
+        "groupTypeId": 2,
+        "name": "Mitarbeiter",
+        "nameTranslated": "Mitarbeiter",
+        "shorty": "M",
+        "sortKey": 4,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 24,
+        "groupTypeId": 1,
+        "name": "Mitarbeiter",
+        "nameTranslated": "Mitarbeiter",
+        "shorty": "M",
+        "sortKey": 4,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 31,
+        "groupTypeId": 4,
+        "name": "(Veraltet) Teilnahme beantragt",
+        "nameTranslated": "(Veraltet) Teilnahme beantragt",
+        "shorty": "",
+        "sortKey": 5,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 29,
+        "groupTypeId": 2,
+        "name": "(Veraltet) Teilnahme beantragt",
+        "nameTranslated": "(Veraltet) Teilnahme beantragt",
+        "shorty": "",
+        "sortKey": 5,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 28,
+        "groupTypeId": 1,
+        "name": "(Veraltet) Teilnahme beantragt",
+        "nameTranslated": "(Veraltet) Teilnahme beantragt",
+        "shorty": "",
+        "sortKey": 5,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      },
+      {
+        "id": 41,
+        "groupTypeId": 5,
+        "name": "(Veraltet) Teilnahme beantragt",
+        "nameTranslated": "(Veraltet) Teilnahme beantragt",
+        "shorty": "",
+        "sortKey": 5,
+        "type": "participant",
+        "isDefault": false,
+        "isHidden": false,
+        "growPathId": null,
+        "isLeader": false
+      }
+    ],
+    "ageGroups": [
+      {
+        "id": 1,
+        "name": "Kinder",
+        "nameTranslated": "Kinder",
+        "sortKey": 1,
+        "start": 6,
+        "end": 11
+      },
+      {
+        "id": 2,
+        "name": "Youth",
+        "nameTranslated": "Youth",
+        "sortKey": 2,
+        "start": 12,
+        "end": 19
+      },
+      {
+        "id": 3,
+        "name": "20+",
+        "nameTranslated": "20+",
+        "sortKey": 3,
+        "start": 18,
+        "end": 29
+      },
+      {
+        "id": 4,
+        "name": "Erwachsene",
+        "nameTranslated": "Erwachsene",
+        "sortKey": 4,
+        "start": 20,
+        "end": 99
+      },
+      {
+        "id": 5,
+        "name": "Senioren",
+        "nameTranslated": "Senioren",
+        "sortKey": 5,
+        "start": 60,
+        "end": 99
+      }
+    ],
+    "targetGroups": [
+      {
+        "id": 14,
+        "name": "Gemischte Gruppe",
+        "nameTranslated": "Gemischte Gruppe",
+        "sortKey": 0
+      },
+      {
+        "id": 7,
+        "name": "Frauen",
+        "nameTranslated": "Frauen",
+        "sortKey": 1
+      },
+      {
+        "id": 9,
+        "name": "men",
+        "nameTranslated": "Männer",
+        "sortKey": 2
+      },
+      {
+        "id": 11,
+        "name": "singles",
+        "nameTranslated": "Singles",
+        "sortKey": 4
+      },
+      {
+        "id": 12,
+        "name": "students",
+        "nameTranslated": "Studenten",
+        "sortKey": 5
+      },
+      {
+        "id": 13,
+        "name": "Eltern",
+        "nameTranslated": "Eltern",
+        "sortKey": 6
+      }
+    ],
+    "groupTypes": [
+      {
+        "id": 1,
+        "name": "Kleingruppe",
+        "nameTranslated": "Kleingruppe",
+        "namePlural": "Kleingruppen",
+        "namePluralTranslated": "Kleingruppen",
+        "shorty": "KG",
+        "description": null,
+        "isLeaderNecessary": true,
+        "availableForNewPerson": true,
+        "permissionDepth": 999,
+        "postsEnabled": true,
+        "sortKey": 0
+      },
+      {
+        "id": 2,
+        "name": "Dienst",
+        "nameTranslated": "Dienst",
+        "namePlural": "Dienste",
+        "namePluralTranslated": "Dienste",
+        "shorty": "DT",
+        "description": null,
+        "isLeaderNecessary": false,
+        "availableForNewPerson": true,
+        "permissionDepth": 999,
+        "postsEnabled": true,
+        "sortKey": 0
+      },
+      {
+        "id": 4,
+        "name": "Merkmal",
+        "nameTranslated": "Merkmal",
+        "namePlural": "Merkmale",
+        "namePluralTranslated": "Merkmale",
+        "shorty": "MM",
+        "description": null,
+        "isLeaderNecessary": false,
+        "availableForNewPerson": true,
+        "permissionDepth": 0,
+        "postsEnabled": true,
+        "sortKey": 0
+      },
+      {
+        "id": 5,
+        "name": "Projekt",
+        "nameTranslated": "Projekt",
+        "namePlural": "Projekte",
+        "namePluralTranslated": "Projekte",
+        "shorty": "PR",
+        "description": null,
+        "isLeaderNecessary": false,
+        "availableForNewPerson": true,
+        "permissionDepth": 999,
+        "postsEnabled": false,
+        "sortKey": 0
+      }
+    ],
+    "groupCategories": [
+      {
+        "id": 9,
+        "name": "Wachstum",
+        "nameTranslated": "Wachstum",
+        "sortKey": 1
+      },
+      {
+        "id": 10,
+        "name": "Gebet",
+        "nameTranslated": "Gebet",
+        "sortKey": 2
+      },
+      {
+        "id": 11,
+        "name": "Gemeinschaft",
+        "nameTranslated": "Gemeinschaft",
+        "sortKey": 4
+      },
+      {
+        "id": 12,
+        "name": "Dienst",
+        "nameTranslated": "Dienst",
+        "sortKey": 5
+      }
+    ],
+    "groupStatuses": [
+      {
+        "id": 1,
+        "name": "active",
+        "nameTranslated": "Aktiv",
+        "sortKey": 10
+      },
+      {
+        "id": 2,
+        "name": "pending",
+        "nameTranslated": "Entwurf",
+        "sortKey": 20
+      },
+      {
+        "id": 4,
+        "name": "finished",
+        "nameTranslated": "Beendet",
+        "sortKey": 30
+      },
+      {
+        "id": 3,
+        "name": "archived",
+        "nameTranslated": "Archiviert",
+        "sortKey": 40
+      }
+    ],
+    "departments": [
+      {
+        "id": 1,
+        "name": "Gemeindeliste",
+        "nameTranslated": "Gemeindeliste",
+        "sortKey": 0,
+        "short": "G"
+      },
+      {
+        "id": 2,
+        "name": "Extern",
+        "nameTranslated": "Extern",
+        "sortKey": 1,
+        "short": "E"
+      },
+      {
+        "id": 3,
+        "name": "Freunde des CZZ",
+        "nameTranslated": "Freunde des CZZ",
+        "sortKey": 2,
+        "short": "F"
+      },
+      {
+        "id": 4,
+        "name": "Unbekannt",
+        "nameTranslated": "Unbekannt",
+        "sortKey": 3,
+        "short": "U"
+      }
+    ],
+    "statuses": [
+      {
+        "id": 0,
+        "name": "unknown",
+        "nameTranslated": "Unbekannt",
+        "sortKey": 0,
+        "shorty": "?",
+        "shortyTranslated": "?",
+        "isMember": false,
+        "isSearchable": true,
+        "securityLevelId": 2
+      },
+      {
+        "id": 1,
+        "name": "status.friend",
+        "nameTranslated": "Freund",
+        "sortKey": 0,
+        "shorty": "status.friend.shortcut",
+        "shortyTranslated": "F",
+        "isMember": false,
+        "isSearchable": true,
+        "securityLevelId": 4
+      },
+      {
+        "id": 2,
+        "name": "status.member",
+        "nameTranslated": "Mitglied",
+        "sortKey": 0,
+        "shorty": "status.member.shortcut",
+        "shortyTranslated": "M",
+        "isMember": false,
+        "isSearchable": true,
+        "securityLevelId": 3
+      },
+      {
+        "id": 3,
+        "name": "status.delete",
+        "nameTranslated": "zu löschen",
+        "sortKey": 0,
+        "shorty": "status.delete.shortcut",
+        "shortyTranslated": "X",
+        "isMember": false,
+        "isSearchable": true,
+        "securityLevelId": 4
+      },
+      {
+        "id": 4,
+        "name": "Administrator",
+        "nameTranslated": "Administrator",
+        "sortKey": 0,
+        "shorty": "A",
+        "shortyTranslated": "A",
+        "isMember": true,
+        "isSearchable": true,
+        "securityLevelId": 5
+      },
+      {
+        "id": 5,
+        "name": "Sekretariat",
+        "nameTranslated": "Sekretariat",
+        "sortKey": 0,
+        "shorty": "S",
+        "shortyTranslated": "S",
+        "isMember": true,
+        "isSearchable": true,
+        "securityLevelId": 6
+      },
+      {
+        "id": 6,
+        "name": "Office",
+        "nameTranslated": "Office",
+        "sortKey": 0,
+        "shorty": "O",
+        "shortyTranslated": "O",
+        "isMember": true,
+        "isSearchable": true,
+        "securityLevelId": 6
+      },
+      {
+        "id": 7,
+        "name": "Bereichsleiter",
+        "nameTranslated": "Bereichsleiter",
+        "sortKey": 0,
+        "shorty": "B",
+        "shortyTranslated": "B",
+        "isMember": true,
+        "isSearchable": true,
+        "securityLevelId": 6
+      }
+    ],
+    "campuses": [
+      {
+        "id": 0,
+        "guid": "69098F3E-D91B-480F-A587-C1202F46A32E",
+        "name": "Zollhaus",
+        "nameTranslated": "Zollhaus",
+        "shortName": "",
+        "shorty": "Z",
+        "sortKey": 0,
+        "meta": {
+          "createdDate": "2022-02-14T08:23:56Z",
+          "createdPerson": {
+            "id": -1
+          },
+          "modifiedDate": "2024-01-03T09:35:06Z",
+          "modifiedPerson": {
+            "id": 624
+          }
+        }
+      }
+    ],
+    "contactLabels": [
+      {
+        "id": 2,
+        "name": "contact.label.private",
+        "nameTranslated": "Privat",
+        "sortKey": 10,
+        "isDefault": true
+      },
+      {
+        "id": 5,
+        "name": "contact.label.business",
+        "nameTranslated": "Arbeit",
+        "sortKey": 20,
+        "isDefault": false
+      }
+    ],
+    "growPaths": [
+      {
+        "id": 1,
+        "name": "Willkommen",
+        "nameTranslated": "Willkommen",
+        "sortKey": 1,
+        "color": "gray"
+      },
+      {
+        "id": 2,
+        "name": "Anschluss finden",
+        "nameTranslated": "Anschluss finden",
+        "sortKey": 2,
+        "color": "green"
+      },
+      {
+        "id": 3,
+        "name": "Wachsen",
+        "nameTranslated": "Wachsen",
+        "sortKey": 3,
+        "color": "blue"
+      },
+      {
+        "id": 4,
+        "name": "Leiten (Gruppe)",
+        "nameTranslated": "Leiten (Gruppe)",
+        "sortKey": 4,
+        "color": "yellow"
+      },
+      {
+        "id": 5,
+        "name": "Leiten (Bereich)",
+        "nameTranslated": "Leiten (Bereich)",
+        "sortKey": 5,
+        "color": "orange"
+      },
+      {
+        "id": 6,
+        "name": "Leiten (Vorstand)",
+        "nameTranslated": "Leiten (Vorstand)",
+        "sortKey": 6,
+        "color": "red"
+      }
+    ],
+    "followUps": [
+      {
+        "id": 1,
+        "name": "Neue Person",
+        "nameTranslated": "Neue Person",
+        "commentViewerId": 0
+      },
+      {
+        "id": 2,
+        "name": "Ein Monat",
+        "nameTranslated": "Ein Monat",
+        "commentViewerId": 0
+      },
+      {
+        "id": 3,
+        "name": "Standard",
+        "nameTranslated": "Standard",
+        "commentViewerId": 0
+      },
+      {
+        "id": 4,
+        "name": "Test",
+        "nameTranslated": "Test",
+        "commentViewerId": 0
+      },
+      {
+        "id": 5,
+        "name": "Kleingruppenleitertreffen hinzufügen",
+        "nameTranslated": "Kleingruppenleitertreffen hinzufügen",
+        "commentViewerId": 0
+      },
+      {
+        "id": 6,
+        "name": "Kleingruppenleitertreffen entfernen",
+        "nameTranslated": "Kleingruppenleitertreffen entfernen",
+        "commentViewerId": 0
+      }
+    ],
+    "followUpIntervals": [
+      {
+        "id": 1,
+        "followUpId": 1,
+        "count": 1,
+        "daysDiff": 7,
+        "info": "Anruf 1 soll erfolgen: Bitte sei nett zu der Person:)\n-Zollhaus Kennenlernen Module online?"
+      },
+      {
+        "id": 2,
+        "followUpId": 1,
+        "count": 2,
+        "daysDiff": 30,
+        "info": "Anruf 2 soll erfolgen: Kleingruppe gefunden? Wo sind Begabungen und Ressourcen? Dienst\n-Alphalive?\n-Glaubensgrundkurs?"
+      },
+      {
+        "id": 3,
+        "followUpId": 1,
+        "count": 3,
+        "daysDiff": 90,
+        "info": "Anruf 3 soll erfolgen: Wie geht es so? Anschluss gefunden? Was könnte der nächste Schritt sein?\n-Taufe\n-Mitgliedschaft\n-Dienst"
+      },
+      {
+        "id": 4,
+        "followUpId": 2,
+        "count": 1,
+        "daysDiff": 30,
+        "info": "Person nachhalten nach einem Monat"
+      },
+      {
+        "id": 5,
+        "followUpId": 4,
+        "count": 1,
+        "daysDiff": -1,
+        "info": "Helfen"
+      },
+      {
+        "id": 6,
+        "followUpId": 5,
+        "count": 1,
+        "daysDiff": -1,
+        "info": "Der zur Gruppe hinzugefügte Leiter muss auch noch zur Gruppe Zonenleitertreffen hinzugefügt werden."
+      },
+      {
+        "id": 7,
+        "followUpId": 6,
+        "count": 1,
+        "daysDiff": 0,
+        "info": "Der aus der Gruppe entfernte Leiter muss auch noch von der Gruppe Zonenleitertreffen entfernt werden."
+      }
+    ],
+    "groupMeetingTemplates": [
+      {
+        "id": 1,
+        "name": "Lowlights / Highlights",
+        "template": [
+          {
+            "type": "textarea",
+            "label": "Gab es eher schwierige Momente?"
+          },
+          {
+            "type": "textarea",
+            "label": "Gab es besonders erwähnenswerte Momente?"
+          },
+          {
+            "type": "textarea",
+            "label": "Sonstiger Infos zum Treffen"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Gemeinschaft, Gebet, Gottes Wort",
+        "template": [
+          {
+            "type": "color",
+            "label": "Wie war die Gemeinschaft?"
+          },
+          {
+            "type": "color",
+            "label": "Wie war die Gebetszeit?"
+          },
+          {
+            "type": "color",
+            "label": "Wir wurde das Wort Gottes aufgenommen?"
+          },
+          {
+            "type": "textarea",
+            "label": "Gab es besonders erwähnenswerte Momente"
+          },
+          {
+            "type": "textarea",
+            "label": "Sonstige Infos zum Treffen"
+          }
+        ]
+      }
+    ],
+    "relationshipTypes": [
+      {
+        "id": 1,
+        "name": "relationship.parent-child",
+        "nameTranslated": "Elternteil/Kind",
+        "securityLevelId": 1,
+        "degreeNameA": "relationship.part.parent",
+        "degreeNameB": "relationship.part.child",
+        "includeInExport": false,
+        "exportTitle": "",
+        "sortKey": 10,
+        "functionKeys": []
+      },
+      {
+        "id": 2,
+        "name": "relationship.couple",
+        "nameTranslated": "Ehepaar",
+        "securityLevelId": 1,
+        "degreeNameA": "relationship.part.spouse",
+        "degreeNameB": "relationship.part.spouse",
+        "includeInExport": true,
+        "exportTitle": "relationship.couple",
+        "sortKey": 0,
+        "functionKeys": []
+      },
+      {
+        "id": 3,
+        "name": "Verlobte(r)",
+        "nameTranslated": "Verlobte(r)",
+        "securityLevelId": 1,
+        "degreeNameA": "Verlobte(r)",
+        "degreeNameB": "Verlobte(r)",
+        "includeInExport": false,
+        "exportTitle": "",
+        "sortKey": 0,
+        "functionKeys": []
+      },
+      {
+        "id": 4,
+        "name": "noduplicate.name",
+        "nameTranslated": "Keine Dublette",
+        "securityLevelId": 6,
+        "degreeNameA": "duplicatecheck.notconfuse",
+        "degreeNameB": "duplicatecheck.notconfuse",
+        "includeInExport": false,
+        "exportTitle": null,
+        "sortKey": 99,
+        "functionKeys": [
+          "noduplicate",
+          "nodelete"
+        ]
+      },
+      {
+        "id": 7,
+        "name": "duplicatecheck.name",
+        "nameTranslated": "Dublette",
+        "securityLevelId": 6,
+        "degreeNameA": "duplicatecheck.original",
+        "degreeNameB": "duplicatecheck.duplicate",
+        "includeInExport": false,
+        "exportTitle": null,
+        "sortKey": 100,
+        "functionKeys": [
+          "openduplicate",
+          "nodelete"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "roles": 24,
+    "ageGroups": 5,
+    "targetGroups": 6,
+    "groupTypes": 4,
+    "groupCategories": 4,
+    "groupStatuses": 4,
+    "departments": 4,
+    "statuses": 8,
+    "campuses": 1,
+    "contactLabels": 2,
+    "growPaths": 6,
+    "followUps": 6,
+    "followUpIntervals": 7,
+    "groupMeetingTemplates": 2
+  }
+}
